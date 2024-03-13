@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<form>
+    <div class="container">
+        <h2>Calculator</h2>
+    <div class="Numb">
+     <label>Number 1:</label>
+     <input class="num1" type="text">
+     <br><br>
+     <label>Number 2:</label>
+     <input class="num2" type="text">
+     <br> <br>
+    </div>
+      <button type="button" onclick="add()">ADDITION</button>
+      <button type="button" onclick="sub()">SUBSTRACTION</button>
+      <button type="button" onclick="mul()">MULTIPLICATION</button>
+      <button type="button" onclick="div()">DIVISION</button>
+      <p class="para"></p>
+
+    </div>
+</form>
+    <p class="para"></p>
+
+    <script>
+        function add() 
+        {
+            let num1 = parseFloat(document.querySelector(".num1").value); 
+            let num2 = parseFloat(document.querySelector(".num2").value);
+            let total = Number(num1) + Number(num2);
+            document.querySelector(".para").innerHTML = "Sum: " + total;
+        }
+
+        function sub() 
+        {
+            let num1 = parseFloat(document.querySelector(".num1").value); 
+            let num2 = parseFloat(document.querySelector(".num2").value);
+            let total = Number(num1) - Number(num2);
+            document.querySelector(".para").innerHTML = "Sum: " + total;
+        }
+         
+        function mul() 
+        {
+            let num1 = parseFloat(document.querySelector(".num1").value); 
+            let num2 = parseFloat(document.querySelector(".num2").value);
+            let total = Number(num1) * Number(num2);
+            document.querySelector(".para").innerHTML = "Sum: " + total;
+        }
+         
+        function div() 
+        {
+            let num1 = parseFloat(document.querySelector(".num1").value); 
+            let num2 = parseFloat(document.querySelector(".num2").value);
+            if(num1===0){
+            document.querySelector(".para").innerHTML = "Error: Division by Zero";
+            }else{
+            let total = Number(num1) / Number(num2);
+            document.querySelector(".para").innerHTML = "Sum: " + total;
+            }
+        }
+
+    </script>
+</body>
+</html>
